@@ -1,0 +1,25 @@
+{
+  "name": "mycontroller/laravel-sensitive-word",
+  "description": "Sensitive Word Service For Laravel5 and Lumen5",
+  "keywords": ["laravel5", "lumen5", "sensitive"],
+  "homepage": "https://github.com/mycontroller/laravel-sensitive-word",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MyController",
+      "email": "mycontroller@163.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/http": "5.1.*",
+    "illuminate/routing": "5.1.*",
+    "illuminate/session": "5.1.*",
+    "illuminate/support": "5.1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyController\\SensitiveWord\\": "src/"
+    }
+  }
+}
