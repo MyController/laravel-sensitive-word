@@ -2,7 +2,9 @@
 
 namespace MyController\SensitiveWord\Providers;
 
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
+use MyController\SensitiveWord\Facades\SensitiveWordFacade;
 use MyController\SensitiveWord\SensitiveWord\SensitiveWordFilter;
 
 class SensitiveWordServiceProvider extends ServiceProvider
@@ -21,7 +23,14 @@ class SensitiveWordServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //敏感词验证规则
+        Validator::extend('has_sensitive_word', function ($attribute, $value, $parameters, $validator) {
+            $sensitiveWord = SensitiveWordFacade::getFirstSensitiveWordInContent($value);
+            if ($sensitiveWord) {
+                \Log::info('"' . $value . '" contains SensitiveWord "' . $sensitiveWord . '"');
+            }
+            return $sensitiveWord === '';
+        });
     }
 
     /**
