@@ -27,7 +27,7 @@ class SensitiveWordServiceProvider extends ServiceProvider
         Validator::extend('has_sensitive_word', function ($attribute, $value, $parameters, $validator) {
             $sensitiveWord = SensitiveWordFacade::getFirstSensitiveWordInContent($value);
             if ($sensitiveWord) {
-                \Log::info('"' . $value . '" contains SensitiveWord "' . $sensitiveWord . '"');
+                info('"' . $value . '" contains SensitiveWord "' . $sensitiveWord . '"');
             }
             return $sensitiveWord === '';
         });
