@@ -12,10 +12,10 @@
   ],
   "require": {
     "php": ">=5.5.9",
-    "illuminate/http": "5.1.* || 5.2.* || 5.3.* || 5.4.*",
-    "illuminate/routing": "5.1.* || 5.2.* || 5.3.* || 5.4.*",
-    "illuminate/session": "5.1.* || 5.2.* || 5.3.* || 5.4.*",
-    "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.*"
+    "illuminate/http": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+    "illuminate/routing": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+    "illuminate/session": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*",
+    "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*"
   },
   "autoload": {
     "psr-4": {
